@@ -407,7 +407,7 @@ somethingGreatService.doSomething(() => {
 
 then, we will face to the Versatile Mock:
 
-```
+```javascript
 // PROBLEM: This Vanilla Mock has noisey features.
 class SomethingGreatServiceStub {
   constructor(stubMode) {
