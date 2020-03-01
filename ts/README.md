@@ -36,6 +36,13 @@ But using Vanilla Mock is still a good choice for many situations.
 
 
 
+Concept
+-------
+
+See [README.md](/README.md#concept).
+
+
+
 Code Examples
 -------------
 
@@ -99,13 +106,6 @@ Code Examples
 * Depended on component: [`src/complex.ts`](./example/src/complex.ts)
 * Tests: [`src/tests/complex_tests.ts`](./example/src/tests/complex_tests.ts)
 * Vanilla Mock: [`src/tests/complex_doubles.ts`](./example/src/tests/complex_doubles.ts)
-
-
-
-Concept
--------
-
-See [README.md](/README.md#concept).
 
 
 
