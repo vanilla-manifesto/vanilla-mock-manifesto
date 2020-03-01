@@ -5,10 +5,10 @@ Vanilla Mock manifesto
 
 Vanilla Mock is one of the implementation approaches of [Mock Objects](https://en.wikipedia.org/wiki/Mock_object) (a.k.a. [Test Doubles](http://xunitpatterns.com/Test%20Double.html)).
 
-This approach has the following advantages:
+This approach has the following pros:
 
 <dl>
-<dt>Advantages</dt>
+<dt>Pros</dt>
 <dd><ul>
 <li>Extremely simple</li>
 <li>Extremely easy to use</li>
@@ -20,10 +20,10 @@ This approach has the following advantages:
 </ul></dd>
 </dl>
 
-For fairness, this approach has the following disadvantages:
+For fairness, this approach has the following cons:
 
 <dl>
-<dt>Disadvantages</dt>
+<dt>Cons</dt>
 <dd><ul>
 <li>About up to 3 components (but typically 1 component) needed for each object to mock</li>
 <li>Maintainability highly depends on design skill</li>
@@ -365,7 +365,7 @@ This should be one of an ideal goal to respect Open-closed Principle.
 
 ### Versatile Mocks
 
-**Vanilla Mocks should have only minimum functionality**. If you need to add extra functionality to Vanilla Mocks, it might be a Versatile Mocks. Keep in mind, the advantages of Vanilla Mocks is derived from the minimum functionality.
+**Vanilla Mocks should have only minimum functionality**. If you need to add extra functionality to Vanilla Mocks, it might be a Versatile Mocks. Keep in mind, the pro of Vanilla Mocks is derived from the minimum functionality.
 
 Typically, it is caused by [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) violations or tight couples with systems under test.
 
