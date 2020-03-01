@@ -528,4 +528,4 @@ Feel free to open issues to discuss about Vanilla DI.
 References
 ----------
 
-- **<a id="note-WEwLC-c6" href="#note-ref-WEwLC-c6">^</a>** Michael Feathers. (2004). [Working Effectively With Legacy Code](https://www.pearson.com/us/higher-education/program/Feathers-Working-Effectively-with-Legacy-Code/PGM254740.html).
+1. **<a id="note-WEwLC-c6" href="#note-ref-WEwLC-c6">^</a>** Michael Feathers. (2004). [Working Effectively With Legacy Code](https://www.pearson.com/us/higher-education/program/Feathers-Working-Effectively-with-Legacy-Code/PGM254740.html).
