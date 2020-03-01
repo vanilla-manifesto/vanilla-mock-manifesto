@@ -1,6 +1,6 @@
 import assert from "assert";
 import {ActualQueryUser} from "../../query_user";
-import {anySuccessfulQuery} from "./named_query_double";
+import {anySuccessfulQuery} from "./named_query_doubles";
 
 
 
