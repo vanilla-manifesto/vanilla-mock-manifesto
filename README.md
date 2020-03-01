@@ -97,7 +97,7 @@ That's all.
 
 
 
-Refactoring Guides for typical Smells
+Refactoring Guides for Typical Smells
 -------------------------------------
 
 If you felt something hard to write mocks or tests, Vanilla Mocker should find several code smells.
