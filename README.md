@@ -36,8 +36,8 @@ But using Vanilla Mock is still a good choice for many situations.
 
 
 
-Supported Languages
--------------------
+Code Examples
+-------------
 
 We provides examples for the languages:
 
