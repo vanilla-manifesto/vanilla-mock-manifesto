@@ -1,0 +1,5 @@
+name "vanilla-mock-example"
+description "Example project with Vanilla Mock."
+authors "Hiroki Noda"
+copyright "Copyright © 2020, Hiroki Noda"
+license "MIT"

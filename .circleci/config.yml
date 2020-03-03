@@ -1,5 +1,5 @@
 ---
-version: 2.1
+version: 2.0
 
 jobs:
   readme:
@@ -35,6 +35,15 @@ jobs:
           command: swift test --enable-test-discovery
           working_directory: ./swift/example
 
+  d:
+    build:
+      working_directory: ~/vanilla-mock-manifesto/d/example
+      docker:
+        - image: dlang2:dmd-circleci
+    steps:
+      - checkout
+      - run: dub test
+
 workflows:
   version: 2
   test_all:
@@ -42,3 +51,4 @@ workflows:
       - readme
       - ts
       - swift
+      - d
