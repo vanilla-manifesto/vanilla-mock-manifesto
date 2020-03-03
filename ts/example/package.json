@@ -1,7 +1,7 @@
 {
   "name": "vanilla-mock-example",
   "version": "1.0.0",
-  "description": "Example project with Vanilla DI",
+  "description": "Example project with Vanilla Mock",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf 'lib/**/*.js'",
