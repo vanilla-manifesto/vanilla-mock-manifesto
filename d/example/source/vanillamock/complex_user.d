@@ -1,6 +1,8 @@
 module vanillamock.complex_user;
 
-import vanillamock.complex : ExampleBothCommandAndQuery, ExampleCallback, ExampleManyMethods;
+import vanillamock.complex : ExampleBothCommandAndQuery, ExampleManyMethods, ExampleTask;
+
+import std.parallelism : Task, task;
 
 class ActualBothCommandAndQueryUser
 {
@@ -39,22 +41,22 @@ public:
     }
 }
 
-class ActualCallbackUser
+class ActualTaskUser
 {
 private:
-    ExampleCallback callback;
+    ExampleTask innerTask;
 
 public:
     bool isCalled;
 
-    this(ExampleCallback callback)
+    this(ExampleTask task)
     {
-        this.callback = callback;
+        this.innerTask = task;
     }
 
-    void doSomething()
+    void doSomething(string x)
     {
-        this.callback.doSomethingAsync((_x){ this.isCalled = true; });
+        this.innerTask.doSomethingAsync((_x) { this.isCalled = true; }, x);
     }
 }
 
@@ -163,20 +165,25 @@ version (unittest)
         }
     }
 
-    class ExampleCallbackStub : ExampleCallback
+    class ExampleTaskStub : ExampleTask
     {
     private:
-        void delegate(string x) callback;
+        typeof(task((void delegate(string)).init, "")) inner;
 
     public:
-        void doSomethingAsync(void delegate(string) callback)
+        void doSomethingAsync(void delegate(string) del, string x)
         {
-            this.callback = callback;
+            this.inner = task(del, x);
         }
 
-        void fireCallback(string x)
+        void executeTask()
         {
-            this.callback(x);
+            this.inner.executeInNewThread();
+        }
+
+        void yieldForce()
+        {
+            this.inner.yieldForce();
         }
     }
 }
@@ -207,9 +214,10 @@ unittest
 
 unittest
 {
-    auto stub = new ExampleCallbackStub;
-    auto sut = new ActualCallbackUser(stub);
-    sut.doSomething();
-    stub.fireCallback("Hello, World!");
+    auto stub = new ExampleTaskStub;
+    auto sut = new ActualTaskUser(stub);
+    sut.doSomething("Hello, World!");
+    stub.executeTask();
+    stub.yieldForce();  // Ensure be executed.
     assert(sut.isCalled);
 }

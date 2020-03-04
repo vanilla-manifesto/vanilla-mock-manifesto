@@ -15,8 +15,8 @@ interface ExampleManyMethods
     int baz(int j);
 }
 
-// BAD?: should use promises if available.
-interface ExampleCallback
+// BAD: should use better async/await stack if available.
+interface ExampleTask
 {
-    void doSomethingAsync(void delegate(string x));
+    void doSomethingAsync(void delegate(string), string);
 }
