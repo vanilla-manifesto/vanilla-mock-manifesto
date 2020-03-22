@@ -3,7 +3,7 @@ Vanilla Mock manifesto
 
 [![CircleCI](https://circleci.com/gh/vanilla-manifesto/vanilla-mock-manifesto/tree/master.svg?style=svg)](https://circleci.com/gh/vanilla-manifesto/vanilla-mock-manifesto/tree/master)
 
-Vanilla Mock is one of the implementation approaches of [Mock Objects](https://en.wikipedia.org/wiki/Mock_object) (a.k.a. [Test Doubles](http://xunitpatterns.com/Test%20Double.html)).
+Vanilla Mock is one of the implementation approaches for [Mock Objects](https://en.wikipedia.org/wiki/Mock_object) (a.k.a. [Test Doubles](http://xunitpatterns.com/Test%20Double.html)). And also, Vanilla Mock is an approach for design.
 
 This approach has the following pros:
 
@@ -20,12 +20,12 @@ This approach has the following pros:
 </ul></dd>
 </dl>
 
-For fairness, this approach has the following cons:
+But it is not a silver bullet, so this approach has the following cons:
 
 <dl>
 <dt>Cons</dt>
 <dd><ul>
-<li>About up to 3 components (but typically 1 component) needed for each object to mock</li>
+<li>About up to 3 components needed (but typically only 1 component needed) for each object to mock</li>
 <li>Maintainability highly depends on design skill</li>
 </ul></dd>
 </dl>
@@ -97,12 +97,12 @@ That's all.
 
 
 
-Refactoring Guides for Typical Smells
--------------------------------------
+Refactoring Guides of Typical Smells
+------------------------------------
 
 If you felt something hard to write mocks or tests, Vanilla Mocker should find several design smells.
 
-Because the important part of Vanilla Mocking are sensitivity for design smells. 
+Because the important part of Vanilla Mocking are sensitivity of design smells. 
 Vanilla Mocks does not hide any design smells, but Mock libraries hides often them.
 
 
