@@ -36,13 +36,13 @@ jobs:
           working_directory: ./swift/example
 
   d:
-    build:
-      working_directory: ~/vanilla-mock-manifesto/d/example
-      docker:
-        - image: dlang2:dmd-circleci
+    docker:
+      - image: dlang2/dmd-circleci:2.089.1
     steps:
       - checkout
-      - run: dub test
+      - run:
+          command: dub test
+          working_directory: ./d/example
 
 workflows:
   version: 2
