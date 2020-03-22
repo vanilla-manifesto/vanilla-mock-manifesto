@@ -41,13 +41,13 @@ Code Examples
 
 We provides examples for the languages:
 
-<!-- TODO: JavaScript -->
 - [TypeScript](./ts/)
+- [Swift](./swift/)
+- [D](./d/)
+<!-- TODO: JavaScript -->
 <!-- TODO: Python -->
 <!-- TODO: Go -->
-- [Swift](./swift/)
 <!-- TODO: C# -->
-- [D](./d/)
 
 However, we always welcome to add examples for other languages above.
 Feel free to send a pull request.
