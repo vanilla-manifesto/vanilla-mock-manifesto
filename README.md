@@ -47,6 +47,7 @@ We provides examples for the languages:
 <!-- TODO: Go -->
 - [Swift](./swift/)
 <!-- TODO: C# -->
+- [D](./d/)
 
 However, we always welcome to add examples for other languages above.
 Feel free to send a pull request.
