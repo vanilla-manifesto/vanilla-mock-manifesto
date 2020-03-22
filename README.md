@@ -111,7 +111,7 @@ Vanilla Mocks does not hide any design smells, but Mock libraries hides often th
 
 **Vanilla Mocks should be small**. For example, if the Vanilla Mock has 4+ methods, it might be a Huge Mock.
 
-Typically, it is caused by [Interface Segragation Principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) violations or [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) violations.
+Typically, it is caused by [Interface Segregation Principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) violations or [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) violations.
 
 There are effective refactoring approaches:
 
@@ -203,7 +203,7 @@ class FooStub {
 ```javascript
 // APPROACH-2: If you can't separate the component, you can still hide
 //             unrelated methods by creating the thin wrapper. It respect
-//             Interface Segragation Principle.
+//             Interface Segregation Principle.
 class Foo {
   constructor(huge) {
     this.huge = huge;
