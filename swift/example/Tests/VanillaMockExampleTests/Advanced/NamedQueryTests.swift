@@ -7,6 +7,6 @@ class NamedQueryTests: XCTestCase {
     func testUsingNamedQueryStub() {
         let sut = ActualQueryUser(query: anySuccessfulQuery())
 
-        sut.doSomething()
+        _ = sut.doSomething()
     }
 }
