@@ -45,7 +45,7 @@ We provides examples for the languages:
 - [TypeScript](./ts/)
 <!-- TODO: Python -->
 <!-- TODO: Go -->
-<!-- TODO: Swift -->
+- [Swift](./swift/)
 <!-- TODO: C# -->
 
 However, we always welcome to add examples for other languages above.
