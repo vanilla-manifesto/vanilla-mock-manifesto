@@ -3,7 +3,8 @@
   "scripts": {
     "test": "npm-run-all test:*",
     "test:readme": "markdown-link-check ../README.md",
-    "test:ts": "markdown-link-check ../ts/README.md"
+    "test:ts": "markdown-link-check ../ts/README.md",
+    "test:swift": "markdown-link-check ../swift/README.md"
   },
   "dependencies": {
     "markdown-link-check": "^3.8.0",

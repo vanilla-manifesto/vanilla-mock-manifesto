@@ -26,9 +26,19 @@ jobs:
           command: npm test
           working_directory: ./ts/example
 
+  swift:
+    docker:
+      - image: swift:5.1.5
+    steps:
+      - checkout
+      - run:
+          command: swift test --enable-test-discovery
+          working_directory: ./swift/example
+
 workflows:
   version: 2
   test_all:
     jobs:
       - readme
       - ts
+      - swift
