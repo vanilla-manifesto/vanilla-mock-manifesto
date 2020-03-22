@@ -1,18 +1,34 @@
 ---
-version: 2
+version: 2.1
+
+jobs:
+  readme:
+    docker:
+      - image: circleci/node:13.10.1
+    steps:
+      - checkout
+      - run:
+          command: npm install
+          working_directory: ./tests
+      - run:
+          command: npm test
+          working_directory: ./tests
+
+  ts:
+    docker:
+      - image: circleci/node:13.10.1
+    steps:
+      - checkout
+      - run:
+          command: npm install
+          working_directory: ./ts/example
+      - run:
+          command: npm test
+          working_directory: ./ts/example
+
 workflows:
   version: 2
   test_all:
     jobs:
+      - readme
       - ts
-
-jobs:
-  ts:
-    docker:
-      - image: circleci/node:12.16.1
-    steps:
-      - checkout
-      - run: |
-          cd ~/project/ts/example
-          npm install
-          npm test
