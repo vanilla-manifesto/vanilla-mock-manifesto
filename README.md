@@ -102,7 +102,7 @@ Refactoring Guides of Typical Smells
 
 If you felt something hard to write mocks or tests, Vanilla Mocker should find several design smells.
 
-Because the important part of Vanilla Mocking are sensitivity of design smells. 
+Because the most important part of Vanilla Mocking is keen sensitivity of design smells. 
 Vanilla Mocks does not hide any design smells, but Mock libraries hides often them.
 
 
@@ -500,12 +500,12 @@ FAQ
 
 Yes and no. It completely depends on your situation.
 
-For example, you should use some DI libraries if the library is already used in your project.
-For another example, you should not use any DI libraries if the project is across many programming languages and the project members are not experts for each languages.
+For example, you should use some mock libraries if the library is already used in your project.
+For another example, you should not use any mock libraries if the project is across many programming languages and the project members are not experts for each languages.
 
-It means, using DI liberaries is not always the best solution.
+It means, using mock liberaries is not always the best solution.
 
-**Don't be afraid to be away from DI libraries.**
+**Don't be afraid to be away from Mock libraries.**
 
 
 
@@ -521,7 +521,7 @@ Contributing
 ------------
 
 Any suggetions are welcome.
-Feel free to open issues to discuss about Vanilla DI.
+Feel free to open issues to discuss about Vanilla Mock.
 
 
 
