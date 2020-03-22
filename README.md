@@ -100,10 +100,10 @@ That's all.
 Refactoring Guides for Typical Smells
 -------------------------------------
 
-If you felt something hard to write mocks or tests, Vanilla Mocker should find several code smells.
+If you felt something hard to write mocks or tests, Vanilla Mocker should find several design smells.
 
-Because the important part of Vanilla Mocking are sensitivity for code smells. 
-Vanilla Mocks does not hide any code smells, but Mock libraries hides often them.
+Because the important part of Vanilla Mocking are sensitivity for design smells. 
+Vanilla Mocks does not hide any design smells, but Mock libraries hides often them.
 
 
 
