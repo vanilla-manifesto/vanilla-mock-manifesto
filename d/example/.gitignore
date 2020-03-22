@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/vanilla-mock-example
+vanilla-mock-example.so
+vanilla-mock-example.dylib
+vanilla-mock-example.dll
+vanilla-mock-example.a
+vanilla-mock-example.lib
+vanilla-mock-example-test-*
+*.exe
+*.o
+*.obj
+*.lst
+*.a

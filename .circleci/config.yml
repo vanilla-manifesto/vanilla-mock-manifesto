@@ -1,18 +1,54 @@
 ---
-version: 2
+version: 2.0
+
+jobs:
+  readme:
+    docker:
+      - image: circleci/node:13.10.1
+    steps:
+      - checkout
+      - run:
+          command: npm install
+          working_directory: ./tests
+      - run:
+          command: npm test
+          working_directory: ./tests
+
+  ts:
+    docker:
+      - image: circleci/node:13.10.1
+    steps:
+      - checkout
+      - run:
+          command: npm install
+          working_directory: ./ts/example
+      - run:
+          command: npm test
+          working_directory: ./ts/example
+
+  swift:
+    docker:
+      - image: swift:5.1.5
+    steps:
+      - checkout
+      - run:
+          command: swift test --enable-test-discovery
+          working_directory: ./swift/example
+
+  d:
+    docker:
+      - image: dlang2/dmd-circleci:2.089.1
+    steps:
+      - checkout
+      - run:
+          command: dub test
+          working_directory: ./d/example
+
 workflows:
   version: 2
   test_all:
     jobs:
+      - readme
       - ts
-
-jobs:
-  ts:
-    docker:
-      - image: circleci/node:12.16.1
-    steps:
-      - checkout
-      - run: |
-          cd ~/project/ts/example
-          npm install
-          npm test
+      - swift
+      - d

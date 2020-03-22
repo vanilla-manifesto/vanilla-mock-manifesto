@@ -3,7 +3,7 @@ Vanilla Mock manifesto
 
 [![CircleCI](https://circleci.com/gh/vanilla-manifesto/vanilla-mock-manifesto/tree/master.svg?style=svg)](https://circleci.com/gh/vanilla-manifesto/vanilla-mock-manifesto/tree/master)
 
-Vanilla Mock is one of the implementation approaches of [Mock Objects](https://en.wikipedia.org/wiki/Mock_object) (a.k.a. [Test Doubles](http://xunitpatterns.com/Test%20Double.html)).
+Vanilla Mock is one of the implementation approaches for [Mock Objects](https://en.wikipedia.org/wiki/Mock_object) (a.k.a. [Test Doubles](http://xunitpatterns.com/Test%20Double.html)). And also, Vanilla Mock is an approach for design.
 
 This approach has the following pros:
 
@@ -20,12 +20,12 @@ This approach has the following pros:
 </ul></dd>
 </dl>
 
-For fairness, this approach has the following cons:
+But it is not a silver bullet, so this approach has the following cons:
 
 <dl>
 <dt>Cons</dt>
 <dd><ul>
-<li>About up to 3 components (but typically 1 component) needed for each object to mock</li>
+<li>About up to 3 components needed (but typically only 1 component needed) for each object to mock</li>
 <li>Maintainability highly depends on design skill</li>
 </ul></dd>
 </dl>
@@ -41,11 +41,12 @@ Code Examples
 
 We provides examples for the languages:
 
-<!-- TODO: JavaScript -->
 - [TypeScript](./ts/)
+- [Swift](./swift/)
+- [D](./d/)
+<!-- TODO: JavaScript -->
 <!-- TODO: Python -->
 <!-- TODO: Go -->
-<!-- TODO: Swift -->
 <!-- TODO: C# -->
 
 However, we always welcome to add examples for other languages above.
@@ -97,13 +98,13 @@ That's all.
 
 
 
-Refactoring Guides for Typical Smells
--------------------------------------
+Refactoring Guides of Typical Smells
+------------------------------------
 
-If you felt something hard to write mocks or tests, Vanilla Mocker should find several code smells.
+If you felt something hard to write mocks or tests, Vanilla Mocker should find several design smells.
 
-Because the important part of Vanilla Mocking are sensitivity for code smells. 
-Vanilla Mocks does not hide any code smells, but Mock libraries hides often them.
+Because the most important part of Vanilla Mocking is keen sensitivity of design smells. 
+Vanilla Mocks does not hide any design smells, but Mock libraries hides often them.
 
 
 
@@ -111,7 +112,7 @@ Vanilla Mocks does not hide any code smells, but Mock libraries hides often them
 
 **Vanilla Mocks should be small**. For example, if the Vanilla Mock has 4+ methods, it might be a Huge Mock.
 
-Typically, it is caused by [Interface Segragation Principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) violations or [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) violations.
+Typically, it is caused by [Interface Segregation Principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) violations or [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) violations.
 
 There are effective refactoring approaches:
 
@@ -203,7 +204,7 @@ class FooStub {
 ```javascript
 // APPROACH-2: If you can't separate the component, you can still hide
 //             unrelated methods by creating the thin wrapper. It respect
-//             Interface Segragation Principle.
+//             Interface Segregation Principle.
 class Foo {
   constructor(huge) {
     this.huge = huge;
@@ -505,7 +506,7 @@ For another example, you should not use any mock libraries if the project is acr
 
 It means, using mock liberaries is not always the best solution.
 
-**Don't be afraid to be away from mock libraries.**
+**Don't be afraid to be away from Mock libraries.**
 
 
 
